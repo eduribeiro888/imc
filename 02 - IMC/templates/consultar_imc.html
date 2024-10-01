@@ -1,0 +1,50 @@
+<!DOCTYPE html> <!-- Define o documento como HTML5 -->
+<html lang="pt-br"> <!-- Define o idioma do conteúdo como português (Brasil) -->
+<head>
+    <meta charset="UTF-8"> <!-- Define o charset como UTF-8 para suportar caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a página para ser responsiva em dispositivos móveis -->
+    <title>Consultar IMC</title> <!-- Define o título da página que aparecerá na aba do navegador -->
+    <link rel="stylesheet" href="/static/styles/estiloconsulta.css"> <!-- Vincula o arquivo de estilo CSS para personalizar a aparência da página -->
+</head>
+
+<body>
+    <!-- Menu de navegação com links para as páginas de calcular e consultar IMC -->
+    <nav class="linha">
+        <a href="/" class="letras1">Calcular IMC</a> | <!-- Link para a página inicial (formulário de cálculo de IMC) -->
+        <a href="/consultar_imc" class="letras2">Consultar IMC</a> <!-- Link corrigido para a rota de consulta de IMC -->
+    </nav>
+
+    <!-- Seção com a tabela para exibir os resultados do IMC -->
+    <div class="consultar_imc">
+        <h2>Consultar IMC</h2> <!-- Cabeçalho da seção de consulta de IMC -->
+        
+        <!-- Início da tabela para exibir os dados -->
+        <table>
+            <tr> <!-- Cabeçalho da tabela -->
+                <th>Nome da Pessoa</th> <!-- Coluna de cabeçalho para o nome da pessoa -->
+                <th>Peso</th> <!-- Coluna de cabeçalho para o peso da pessoa -->
+                <th>Altura</th> <!-- Coluna de cabeçalho para a altura da pessoa -->
+                <th>IMC</th> <!-- Coluna de cabeçalho para o IMC calculado -->
+                <th>Status</th> <!-- Coluna de cabeçalho para o status baseado no IMC (Ex.: Saudável, Acima do Peso, etc.) -->
+            </tr>
+
+            <!-- Laço de repetição para listar as pessoas e seus respectivos dados -->
+            {% for pro in imc %}
+            <tr> <!-- Linha da tabela com os dados de cada pessoa -->
+                <td>{{ pro.nome }}</td> <!-- Exibe o nome da pessoa -->
+                <td>{{ pro.peso }}</td> <!-- Exibe o peso da pessoa -->
+                <td>{{ pro.altura }}</td> <!-- Exibe a altura da pessoa -->
+                <td>{{ pro.imc }}</td> <!-- Exibe o IMC calculado da pessoa -->
+                <td>{{ pro.status }}</td> <!-- Exibe o status da pessoa com base no IMC -->
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="5">Nenhum resultado encontrado</td> <!-- Caso não haja dados -->
+            </tr>
+            {% endfor %}
+        </table> <!-- Fim da tabela -->
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); /* Importa a fonte Montserrat do Google Fonts */
+
+:root{
+    --fonte-primaria:"Montserrat", sans-serif; /* Define a fonte primária */
+    --cor-primaria: #98FB98; /* Define a cor primária */
+}
+
+*{
+    margin: 0; /* Remove margem padrão */
+    padding: 0; /* Remove padding padrão */
+}
+
+.body{
+    background-color: rgb(0, 0, 0); /* Define o fundo do corpo da página como preto */
+}
+
+.linha{
+    background-color: var(--cor-primaria); /* Define a cor de fundo da linha como a cor primária */
+    padding: 15px; /* Define o espaçamento interno de 15px */
+    text-align: center; /* Alinha o texto ao centro */
+    font-family: var(--fonte-primaria); /* Define a fonte primária */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    color: #000000; /* Define a cor do texto como preto */
+}
+
+.letras1, .letras2{
+    text-decoration: none ; /* Remove a decoração (sublinhado) dos links */
+    color: rgb(0, 0, 0); /* Define a cor dos links como preto */
+}
+
+.cad_imc{
+    display: grid; /* Define um grid layout */
+    grid-template-columns: auto; /* Cria uma única coluna de largura automática */
+    place-items: center; /* Centraliza os itens no grid */
+}
+
+.cad_imc_formulario{
+    display: grid; /* Define um grid layout para o formulário */
+    grid-template-columns: auto; /* Cria uma única coluna de largura automática */
+    font-family: var(--fonte-primaria); /* Define a fonte primária */
+    border: 1px solid black; /* Define uma borda preta de 1px */
+    padding: 15px; /* Define o espaçamento interno de 15px */
+    margin-top: 20px; /* Adiciona uma margem superior de 20px */
+    border-radius: 20px 0 0 0; /* Define os cantos superiores arredondados */
+    box-shadow: 10px 10px rgb(161, 255, 161); /* Adiciona sombra ao formulário */
+}
+
+.cad_imc_formulario h2{
+    margin-bottom: 30px; /* Define uma margem inferior de 30px */
+}
+
+.cad_formulario label{
+    font-weight: 500; /* Define o peso da fonte como 500 (semi-negrito) */
+    padding-left: 10px; /* Adiciona um padding à esquerda de 10px */
+    padding-bottom: 5px; /* Adiciona um padding inferior de 5px */
+}
+
+.cad_imc_formulario input[type="text"]{
+    margin-bottom: 30px; /* Define uma margem inferior de 30px */
+    font-size: 24px; /* Define o tamanho da fonte como 24px */
+    border-radius: 10px; /* Define bordas arredondadas de 10px */
+    padding: 10px 15px; /* Define o espaçamento interno (padding) do campo de texto */
+}
+
+.cad_imc_formulario input[type="text"]:hover{
+    background-color: rgb(161, 255, 161); /* Altera a cor de fundo ao passar o mouse sobre o campo de texto */
+}
+
+.cad_imc_enviar{
+    font-size: 20px; /* Define o tamanho da fonte do botão de enviar como 20px */
+    background-color: rgb(161, 255, 161); /* Define a cor de fundo do botão como verde claro */
+    padding: 3px 10px; /* Define o espaçamento interno (padding) do botão */
+    border-radius: 30px; /* Define bordas arredondadas de 30px */
+    cursor: pointer; /* Define o cursor como uma mão ao passar o mouse sobre o botão */
+    margin-left: 250px; /* Adiciona uma margem à esquerda de 250px */
+}
+
+.cad_imc_enviar:hover{
+    background-color: rgb(101, 171, 86); /* Altera a cor de fundo ao passar o mouse sobre o botão */
+    color: black; /* Define a cor do texto do botão como preto */
+}
+
+.cad_notas_cancelar:hover{
+    background-color: rgb(144, 71, 71); /* Altera a cor de fundo ao passar o mouse sobre o botão de cancelar */
+    color: black; /* Define a cor do texto do botão como preto */
+}
+
+/* Página de Consulta */
+
+.consultar_imc{
+    display: grid; /* Define um grid layout */
+    grid-template-columns: auto; /* Cria uma única coluna de largura automática */
+    place-items: center; /* Centraliza os itens no grid */
+    margin-top: 30px; /* Adiciona uma margem superior de 30px */
+    font-family: var(--fonte-primaria); /* Define a fonte primária */
+}
+
+.consultra_imc table{
+    border: 0.5px solid black; /* Define uma borda preta de 0,5px para a tabela */
+}
+
+.consultar_imc th{
+    padding: 10px 25px; /* Define o espaçamento interno (padding) das células do cabeçalho */
+    background-color: rgb(211, 214, 0); /* Define a cor de fundo do cabeçalho da tabela */
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html> <!-- Define o tipo de documento como HTML5 -->
+<html lang="pt-br"> <!-- Define o idioma do conteúdo como português (Brasil) -->
+<head>
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8, que permite o uso de caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a página para ser responsiva em dispositivos móveis -->
+    <title>Calcular IMC</title> <!-- Define o título da página, que aparecerá na aba do navegador -->
+    <link rel="stylesheet" href="/static/styles/estilo.css"> <!-- Vincula o arquivo de estilo CSS para personalizar a aparência da página -->
+</head>
+
+<body>
+    <!-- Menu de navegação com links para calcular e consultar IMC -->
+    <nav class="linha">
+        <a href="/" class="letras1">Calcular IMC</a> | <!-- Link para a página inicial (formulário de cálculo do IMC) -->
+        <a href="/consultar_imc" class="letras2">Consultar IMC</a> <!-- Link para a página de consulta do IMC calculado -->
+    </nav>
+   
+    <!-- Seção com o formulário para calcular o IMC -->
+    <div class="cad_imc">
+        <!-- Formulário que envia os dados via método POST para a rota "/validar_imc" -->
+        <form action="/validar_imc" method="post" class="cad_imc_formulario">
+            <h2>Calcular IMC</h2> <!-- Cabeçalho do formulário -->
+            
+            <!-- Campo para o nome da pessoa -->
+            <label for="nome_da_pessoa">Seu nome:</label>
+            <input type="text" name="nome_da_pessoa" id="nome_da_pessoa" required> <!-- Campo de entrada de texto para o nome da pessoa -->
+
+            <!-- Campo para o peso em quilogramas -->
+            <label for="peso">Seu Peso (Kg):</label>
+            <input type="text" name="peso" id="peso" required> <!-- Campo de entrada para o peso em Kg -->
+
+            <!-- Campo para a altura em metros -->
+            <label for="altura">Sua Altura (m):</label>
+            <input type="text" name="altura" id="altura" required> <!-- Campo de entrada para a altura em metros -->
+
+            <!-- Botão de envio do formulário -->
+            <div class="botao_enviar">
+                <button type="submit" class="cad_imc_enviar">Enviar</button> <!-- Botão para enviar os dados do formulário -->
+            </div>
+        </form>
+    </div> 
+</body>
+</html>

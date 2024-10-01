@@ -1,0 +1,12 @@
+
+Eduardo;60.0;1.7;20.76
+Eduardo;70.0;1.8;21.60
+Eduardo;100.0;1.7;34.60
+Eduardo;100.0;1.7;34.60
+Eduardo;100.0;1.8;30.86; Obeso
+Eduardo;60.0;1.7;20.76; Saud�vel
+Eduardo;70.0;1.7;24.22; Ta suav
+Eduardo;100.0;1.65;36.73; Rafaella????????
+Eduardo;100.0;1.7;34.60; Obeso
+henrique;1e+22;1.7;3460207612456747925504.00; Obeso
+henrique;1000.0;1.7;346.02; Obeso
